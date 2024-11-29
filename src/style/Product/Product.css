@@ -1,0 +1,43 @@
+@charset "UTF-8";
+.App .product-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.App .product-grid a,
+.App .product-grid a:visited,
+.App .product-grid a:hover,
+.App .product-grid a:active {
+  /* Sử dụng màu sắc của phần tử cha */
+  color: inherit;
+  /* Loại bỏ gạch chân */
+  text-decoration: none;
+}
+.App .product-item {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  font-family: "Merriweather Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #1F4045;
+}
+.App .product-item img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.App .product-item:hover {
+  color: #6a939a;
+}
+.App .pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.App .pagination button {
+  margin-right: 5px;
+}/*# sourceMappingURL=Product.css.map */

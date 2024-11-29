@@ -1,0 +1,63 @@
+//productName
+@mixin product-name {
+  font-family: "Merriweather Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  color: #1f4045;
+  h2 {
+    font-weight: 500;
+    font-size: 25px;
+  }
+}
+
+.App {
+  .mb-3 {
+    margin-left: 30px;
+    width: 250px;
+  }
+  .product-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    ); // Tự động điều chỉnh số cột dựa trên kích thước màn hình
+    gap: 20px; // Khoảng cách giữa các sản phẩm
+
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  .product-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    img {
+      width: 100%;
+      height: 300px; // Giảm chiều cao ảnh để phù hợp với màn hình điện thoại
+      object-fit: cover;
+    }
+
+    &:hover {
+      color: #6a939a;
+    }
+
+    @include product-name;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    button {
+      margin-right: 5px;
+    }
+  }
+}
